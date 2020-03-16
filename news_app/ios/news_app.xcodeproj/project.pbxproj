@@ -18,6 +18,7 @@
 		2D02E4BF1E0B4AB3006451C7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
 		2DCD954D1E0B4F2C00145EB5 /* news_appTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* news_appTests.m */; };
 		9ABB8304223063EC1E75B4E7 /* libPods-news_appTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = AAD73F7F7162E12A9839008F /* libPods-news_appTests.a */; };
+		CECC11C0241E1F530072E196 /* FontAwesome.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CECC11B1241E1F520072E196 /* FontAwesome.ttf */; };
 		EAB257B9D4B1A46287C29473 /* libPods-news_app-tvOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F9C438D95F2BA30F84D4787B /* libPods-news_app-tvOS.a */; };
 		FEDE83F8EBAD53648E835926 /* libPods-news_app.a in Frameworks */ = {isa = PBXBuildFile; fileRef = ACD9C29D4F1F60EBE8E94A34 /* libPods-news_app.a */; };
 /* End PBXBuildFile section */
@@ -61,6 +62,7 @@
 		AAD73F7F7162E12A9839008F /* libPods-news_appTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-news_appTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		ACD9C29D4F1F60EBE8E94A34 /* libPods-news_app.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-news_app.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		AE4B7500360804A4E4F81D98 /* Pods-news_app-tvOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-news_app-tvOS.release.xcconfig"; path = "Target Support Files/Pods-news_app-tvOS/Pods-news_app-tvOS.release.xcconfig"; sourceTree = "<group>"; };
+		CECC11B1241E1F520072E196 /* FontAwesome.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = FontAwesome.ttf; sourceTree = "<group>"; };
 		D14FD603ADC18E86E6E9AC83 /* Pods-news_appTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-news_appTests.release.xcconfig"; path = "Target Support Files/Pods-news_appTests/Pods-news_appTests.release.xcconfig"; sourceTree = "<group>"; };
 		D8635D5126474920480BBE44 /* Pods-news_app-tvOSTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-news_app-tvOSTests.debug.xcconfig"; path = "Target Support Files/Pods-news_app-tvOSTests/Pods-news_app-tvOSTests.debug.xcconfig"; sourceTree = "<group>"; };
 		DE47B4DFD0C41537684B7829 /* libPods-news_app-tvOSTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-news_app-tvOSTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -125,6 +127,7 @@
 		13B07FAE1A68108700A75B9A /* news_app */ = {
 			isa = PBXGroup;
 			children = (
+				CECC11A6241E1F520072E196 /* Fonts */,
 				008F07F21AC5B25A0029DE68 /* main.jsbundle */,
 				13B07FAF1A68108700A75B9A /* AppDelegate.h */,
 				13B07FB01A68108700A75B9A /* AppDelegate.m */,
@@ -194,8 +197,16 @@
 				2F57E27DB41AF796320C6E63 /* Pods-news_appTests.debug.xcconfig */,
 				D14FD603ADC18E86E6E9AC83 /* Pods-news_appTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		CECC11A6241E1F520072E196 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				CECC11B1241E1F520072E196 /* FontAwesome.ttf */,
+			);
+			name = Fonts;
+			path = "../node_modules/react-native-vector-icons/Fonts";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -230,6 +241,7 @@
 				13B07F8C1A680F5B00A75B9A /* Frameworks */,
 				13B07F8E1A680F5B00A75B9A /* Resources */,
 				00DD1BFF1BD5951E006B06BC /* Bundle React Native code and images */,
+				AEF3C41FFAE381BA2202E8D3 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -308,6 +320,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 				Base,
 			);
@@ -336,6 +349,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CECC11C0241E1F530072E196 /* FontAwesome.ttf in Resources */,
 				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
 				13B07FBD1A68108700A75B9A /* LaunchScreen.xib in Resources */,
 			);
@@ -371,7 +385,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "export NODE_BINARY=node\n../node_modules/react-native/scripts/react-native-xcode.sh";
+			shellScript = "export NODE_BINARY=node\n../node_modules/react-native/scripts/react-native-xcode.sh\n";
 		};
 		2D02E4CB1E0B4B27006451C7 /* Bundle React Native Code And Images */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -451,6 +465,22 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		AEF3C41FFAE381BA2202E8D3 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-news_app/Pods-news_app-resources.sh",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-news_app/Pods-news_app-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		DF3313B2787B799AEE3DBA6A /* [CP] Check Pods Manifest.lock */ = {
