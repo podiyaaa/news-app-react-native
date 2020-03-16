@@ -39,7 +39,8 @@ const style = StyleSheet.create({
         shadowOffset: { width: 0, height: 2 },
         shadowColor: Colors.gray,
         shadowRadius: 5,
-        shadowOpacity: 0.5
+        shadowOpacity: 0.5,
+        elevation: 1,
     },
     articleImage: { height: 150, resizeMode: 'cover', width: '100%' },
     articleTitleView: { width: '100%', marginTop: 20, marginBottom: 20 },

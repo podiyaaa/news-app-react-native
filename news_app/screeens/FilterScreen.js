@@ -1,7 +1,6 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { connect } from 'react-redux';
 import { SafeAreaView, ScrollView, TouchableOpacity, Text, View, ActivityIndicator, StyleSheet } from 'react-native';
-import { useFocusEffect } from '@react-navigation/native';
 import { showMessage } from "react-native-flash-message";
 import { getArticlesByCategory, changeCategory } from '../actions';
 import ArticleList from '../components/ArticleList';
@@ -10,13 +9,7 @@ import * as Colors from '../utils/Colors';
 const FilterScreen = ({ navigation: { navigate }, dispatch, articles, selectedCategory, isLoading, hasError, errorMessage }) => {
     const categories = ['Bitcoin', 'Apple', 'Earthquake', 'Animal']
 
-    useFocusEffect(
-        React.useCallback(() => {
-            dispatch(getArticlesByCategory(selectedCategory))
-            return () => {
-            };
-        }, [])
-    );
+    useEffect(() => { dispatch(getArticlesByCategory(selectedCategory)) }, []);
 
     return (
         <>
